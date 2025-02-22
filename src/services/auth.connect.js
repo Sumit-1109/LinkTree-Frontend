@@ -9,3 +9,23 @@ export const signup = (data) => {
         body: JSON.stringify(data),
     });
 };
+
+export const signin = (data) => {
+    return fetch(`${URL}/api/user/signin`, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+    });
+};
+
+export const userinfo = (data) => {
+    return fetch(`${URL}/api/user/userinfo`, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+    });
+}
